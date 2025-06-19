@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-export const pageSchema = z.object({
+export const PageSchema = z.object({
 	hero: z.object({
 		headline: z.string().max(80),
 		subheadline: z.string().max(160),
@@ -14,4 +14,4 @@ export const pageSchema = z.object({
 	).min(2).max(4),
 });
 
-export type Page = z.infer<typeof pageSchema>;
+export type Page = z.infer<typeof PageSchema>;
