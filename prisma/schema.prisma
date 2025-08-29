@@ -23,14 +23,17 @@ model User {
 }
 
 model Page {
-  id          String   @id @default(uuid())
-  userId      String
-  user        User     @relation(fields: [userId], references: [id])
-  status      String   @default("queued") // queued | generating | live | failed
-  previewUrl  String?  @db.VarChar(255)
-  prodUrl     String?  @db.VarChar(255)
-  answersJson Json
-  createdAt   DateTime @default(now())
+  id            String   @id @default(uuid())
+  userId        String
+  businessName String?  @db.VarChar(60)
+  status        String   @default("live")
+  answersJson   Json
+  generatedJson Json?
+  previewUrl    String?                     // can leave or remove for now
+  prodUrl       String?                     // can leave or remove for now
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt @default(now())
+  user          User     @relation(fields: [userId], references: [id])
 }
 
 
