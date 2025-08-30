@@ -1,10 +1,8 @@
 import Link from "next/link";
 import { ArrowRight, Zap, Globe, Sparkles, Code, Palette, Rocket } from "lucide-react";
 import { SignedIn, SignedOut } from "@clerk/nextjs";
-import { AnimatedGradientText } from "@/components/magicui/animated-gradient-text";
-import { NumberTicker } from "@/components/magicui/number-ticker";
-import { RetroGrid } from "@/components/magicui/retro-grid";
-import { BorderBeam } from "@/components/magicui/border-beam";
+import { NumberTicker } from "@/components/number-ticker";
+import { BorderBeam } from "@/components/border-beam";
 import { GeniqueLogo } from "@/components/genique-logo";
 
 export default function Home() {
@@ -59,14 +57,7 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="mb-8">
-            <AnimatedGradientText>
-              🚀 <hr className="mx-2 h-4 w-[1px] shrink-0 bg-gray-300" />{" "}
-              <span className="text-sm">AI-Powered Landing Page Generation</span>
-            </AnimatedGradientText>
-          </div>
-          
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">          
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
              Create Stunning Landing Pages with{" "}
                AI Magic
@@ -478,7 +469,6 @@ export default function Home() {
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-500 to-purple-600 relative overflow-hidden">
-        <RetroGrid />
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
           <h2 className="text-3xl sm:text-4xl font-bold mb-6">
             Ready to Create Your Landing Page?
