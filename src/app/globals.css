@@ -128,4 +128,7 @@
   html:focus-within {
     scroll-behavior: smooth;
   }
+  html {
+    scroll-behavior: smooth;
+  }
 }
